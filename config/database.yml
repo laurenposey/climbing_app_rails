@@ -1,0 +1,19 @@
+default: &default
+  adapter: postgresql
+  encoding: WIN1252
+
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: rock_jock_development
+
+test:
+  <<: *default
+  database: rock_jock_test
+
+production:
+  <<: *default
+  database: rock_jock_production
+  username: rock_jock
+  password: <%= ENV['ROCK_JOCK_DATABASE_PASSWORD'] %>
