@@ -1,3 +1,3 @@
 class Place < ActiveRecord::Base
-  validates :city, :presence => true
+  validates :name, :presence => true
 end
