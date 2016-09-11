@@ -1,6 +1,7 @@
 <h1><%= @place.name %></h1>
-
-<p><%= link_to "Return to places", places_path %></p>
+<p><%= link_to 'Edit', edit_place_path(@place) %></p>
 <p><%= link_to "Delete", place_path(@place),
                          :data => {:confirm => "You sure?",
                                    :method => "delete"} %></p>
+
+<p><%= link_to "Return to places", places_path %></p>
