@@ -1,3 +1,5 @@
 Rails.application.routes.draw do
-  resources :places
+  resources :places do
+    resources :routes
+  end
 end
