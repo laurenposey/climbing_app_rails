@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 20160911215949) do
   end
 
   create_table "routes", force: :cascade do |t|
-    t.string   "type"
+    t.string   "kind"
     t.float    "grade"
     t.integer  "place_id"
     t.datetime "created_at", null: false

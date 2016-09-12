@@ -1,0 +1,16 @@
+<%= form_for [@place, @route] do |f| %>
+
+  <div class="field">
+    <%= f.label :kind %>
+    <%= f.text_field :kind %>
+  </div>
+
+  <div class="field">
+    <%= f.label :grade %>
+    <%= f.text_area :grade %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,7 +1,21 @@
 <h1><%= @place.name %></h1>
-<p><%= link_to 'Edit', edit_place_path(@place) %></p>
-<p><%= link_to "Delete", place_path(@place),
-                         :data => {:confirm => "You sure?",
-                                   :method => "delete"} %></p>
 
-<p><%= link_to "Return to places", places_path %></p>
+
+<% if @place.routes.any? %>
+
+<ol>
+  <% @place.routes.each do |route| %>
+  <li>
+    <%= route.kind %> |
+    <%= route.grade %> |
+    <%= link_to "View Route", place_route_path(@place, route) %>
+  </li>
+  <% end %>
+</ol>
+<% end %>
+
+<p><%= link_to "Add a Route", new_place_route_path(@place) %></p>
+<p><%= link_to "Edit Place", edit_place_path(@place) %></p>
+<p><%= link_to "Delete Place", place_path(@place),
+                        :data => {:confirm => "Are you sure?",
+                                  :method => "delete"} %></p>
