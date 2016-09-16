@@ -23,7 +23,7 @@ class RoutesController < ApplicationController
       flash[:notice] = "Route saved successfully!"
       redirect_to place_path(@place)
     else
-      flash[:alert] = "FAIL to save"
+      flash[:alert] = "Something went wrong"
       render :new
     end
   end
@@ -35,7 +35,7 @@ class RoutesController < ApplicationController
       flash[:notice] = "Update saved successfully"
       redirect_to place_path(@place)
     else
-      flash[:alert] = "fail to update"
+      flash[:alert] = "Something went wrong"
       render :edit
     end
   end
