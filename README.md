@@ -8,7 +8,7 @@
 
 ## Description
 
-_A website where a user can create an account and  keep track of their climing places and the difficulty of routes they climb at those places._
+_A website where a user can create an account and  keep track of their climbing places and the difficulty of routes they climb at those places._
 
 ## Specifications
 #### Implemented Features:
