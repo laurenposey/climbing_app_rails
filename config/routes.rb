@@ -9,6 +9,6 @@ Rails.application.routes.draw do
       end
     resources :places do
       resources :routes
+    end
   end
-end
 end

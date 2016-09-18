@@ -14,6 +14,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise'
 gem 'paperclip', '~> 5.0.0'
 gem "nokogiri", ">= 1.6.7.rc"
+gem 'rails_bootstrap_navbar'
 
 group :development, :test do
   gem 'byebug', platform: :mri
