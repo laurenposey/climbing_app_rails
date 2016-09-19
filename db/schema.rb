@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20160918015954) do
     t.string   "street_address"
     t.string   "city"
     t.string   "state"
+    t.integer  "user_id"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
   end

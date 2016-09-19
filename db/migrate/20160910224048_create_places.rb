@@ -5,6 +5,7 @@ class CreatePlaces < ActiveRecord::Migration[5.0]
       t.column :street_address, :string
       t.column :city, :string
       t.column :state, :string
+      t.column :user_id, :integer
       # t.column :is_indoor, :boolean, default: true
 
       t.timestamps

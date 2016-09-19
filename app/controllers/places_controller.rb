@@ -13,7 +13,8 @@ class PlacesController < ApplicationController
   end
 
   def create
-    @place = Place.new(place_params)
+    @user = User.find(current_user.id)
+    @place = @user.places.new(place_params)
     if @place.save
       flash[:notice] = "Place successfully added!"
       redirect_to places_path
@@ -47,6 +48,6 @@ class PlacesController < ApplicationController
 
 private
   def place_params
-    params.require(:place).permit(:name, :street_address, :city, :state)
+    params.require(:place).permit(:name, :street_address, :city, :state, :user_id)
   end
 end
