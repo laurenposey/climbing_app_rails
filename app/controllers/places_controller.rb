@@ -29,6 +29,7 @@ class PlacesController < ApplicationController
   end
 
   def update
+    @user = User.find(current_user)
     @place = Place.find(params[:id])
     if @place.update(place_params)
       flash[:notice] = "Place successfully updated!"
@@ -46,7 +47,7 @@ class PlacesController < ApplicationController
     redirect_to places_path
   end
 
-private
+  private
   def place_params
     params.require(:place).permit(:name, :street_address, :city, :state, :user_id)
   end

@@ -18,7 +18,7 @@ gem 'rails_bootstrap_navbar'
 
 group :development, :test do
   gem 'byebug', platform: :mri
-  gem 'rspec-rails'
+  gem 'rspec-rails', '~> 3.5'
   gem 'launchy'
   gem 'pry'
   gem 'shoulda-matchers'

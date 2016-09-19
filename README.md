@@ -12,6 +12,7 @@ _A website where a user can create an account and  keep track of their climbing 
 
 ## Specifications
 #### Implemented Features:
+* _As a user/admin, I'd like to have my own account to save my places and my routes._
 * _As a user, I'd like to create, read, update, and delete a place where I climb._
 * _As a user, I'd like to see flash notifications to let me know whether or not the site my changes are being saved._
 * _As a user, I'd like to add a route to a place._
@@ -59,7 +60,8 @@ _Finally, in a separate terminal window:_
 
 ## Known bugs
 
-70% testing coverage.
+* none
+* 82.42% testing coverage.
 
 ## Support and contact details
 
