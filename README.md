@@ -19,9 +19,10 @@ _A website where a user can create an account and  keep track of their climbing 
 * _As a user, I'd like to be able to click on a place to view additional information.
 * _As a user, I'd like to be able to sign in using my email.._
 * _As a user/admin, I'd like the landing page to be the login/ registration page._
+* _As a user, I'd like to have a navbar at the top of the page to help me get around the site_
 
 #### Features Coming Soon:
-* _As a user, I'd like to have a navbar at the top of the page to help me get around the site_
+
 * _As a user, I'd like the flash notices to have boxes around them that I can close._
 * _As a user, I'd like rate the route I climbed._
 * _As an admin, I'd like to have my own login portal._
