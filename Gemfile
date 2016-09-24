@@ -22,10 +22,11 @@ group :development, :test do
   gem 'launchy'
   gem 'pry'
   gem 'shoulda-matchers'
+  gem 'poltergeist'
   gem 'factory_girl_rails'
   gem 'capybara'
   gem 'simplecov', require: false
-
+  gem 'database_cleaner'
 end
 
 group :development do

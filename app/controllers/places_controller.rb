@@ -17,7 +17,10 @@ class PlacesController < ApplicationController
     @place = @user.places.new(place_params)
     if @place.save
       flash[:notice] = "Place successfully added!"
-      redirect_to places_path
+      respond_to do |format|
+        format.html { redirect_to places_path }
+        format.js
+      end
     else
       flash[:alert] = "Something went wrong"
       render :new
