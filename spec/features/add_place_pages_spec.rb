@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe "the add a place process" do
-  it "adds a new place" do
+  it "adds a new place", js: true do
     user = FactoryGirl.create(:user)
     login_as(user, :scope => :user)
     visit places_path
