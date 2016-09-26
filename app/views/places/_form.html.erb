@@ -1,6 +1,6 @@
 <%= render "layouts/errors", :object => @place %>
 
-<div id="new_place_form">
+<div>
   <%= form_for [@place], remote: true do |f| %>
 
     <%= f.label :name %>

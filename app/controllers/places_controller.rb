@@ -33,10 +33,10 @@ class PlacesController < ApplicationController
     @place = Place.find(params[:id])
     if @place.update(place_params)
       flash[:notice] = "Place successfully updated!"
-      redirect_to places_path
+      redirect_to :back
     else
       flash[:alert] = "Something went wrong"
-      render :edit
+      render :back
     end
   end
 

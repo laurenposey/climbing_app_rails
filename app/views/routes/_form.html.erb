@@ -1,4 +1,6 @@
-<%= form_for [@place, @route] do |f| %>
+<%= render "layouts/errors", :object => @place %>
+
+<%= form_for [@place, @route], remote: true do |f| %>
 
   <div class="field">
     <%= f.label :kind %>
@@ -11,6 +13,6 @@
   </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit :class => "btn btn-submit" %>
   </div>
-<% end %>
+<% end  %>

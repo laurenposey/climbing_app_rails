@@ -1,9 +1,10 @@
-<h1><%= @place.name %></h1>
-
+<div id= "place_name">
+  <h1><%= @place.name %></h1>
+</div>
 
 <% if @place.routes.any? %>
 
-<ol>
+<ul id="routes">
   <% @place.routes.each do |route| %>
   <li>
     <%= route.kind %> |
@@ -11,11 +12,11 @@
     <%= link_to "View Route", place_route_path(@place, route) %>
   </li>
   <% end %>
-</ol>
+</ul>
 <% end %>
 
-<p><%= link_to "Add a Route", new_place_route_path(@place) %></p>
-<p><%= link_to "Edit Place", edit_place_path(@place) %></p>
+<p><%= link_to "Add a Route", new_place_route_path(@place), id: "new_place_route_link", :class=> "btn btn-default", remote: true %></p>
+<p><%= link_to "Edit Place", edit_place_path(@place), id: "edit_place_link", :class=> "btn btn-default", remote: true %></p>
 <p><%= link_to "Delete Place", place_path(@place),
                         :data => {:confirm => "Are you sure?",
-                                  :method => "delete"} %></p>
+                                  :method => "delete"}, :class=> "btn btn-default" %></p>

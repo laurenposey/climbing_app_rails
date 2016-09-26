@@ -1,0 +1,4 @@
+$('form').remove();
+$('#new_place_route_link').show();
+$('ul p').remove();
+$('#routes').append('<li><%= route.kind %> | <%= route.grade %> | <%= link_to "View Route", place_route_path(@place, route) %></li>')

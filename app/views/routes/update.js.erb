@@ -1,0 +1,4 @@
+$('form').remove();
+$('#edit_place_route_link').show();
+$('ul p').remove();
+$('#route_info').append('<p><strong>Type of Climbing:</strong> <%= @route.kind %></p><p><strong>Grade:</strong> <%= @route.grade %></p><p><strong>Place:</strong> <%= @route.place.name %></p>')

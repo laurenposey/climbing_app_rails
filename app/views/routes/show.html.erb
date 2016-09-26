@@ -1,19 +1,21 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Type of Climbing:</strong>
-  <%= @route.kind %>
-</p>
+<div id="route_info">
+  <p>
+    <strong>Type of Climbing:</strong>
+    <%= @route.kind %>
+  </p>
 
-<p>
-  <strong>Grade:</strong>
-  <%= @route.grade %>
-</p>
+  <p>
+    <strong>Grade:</strong>
+    <%= @route.grade %>
+  </p>
 
-<p>
-  <strong>Place:</strong>
-  <%= @route.place.name %>
-</p>
+  <p>
+    <strong>Place:</strong>
+    <%= @route.place.name %>
+  </p>
+</div>
 
-<%= link_to 'Edit', edit_place_route_path(@route) %> |
+<%= link_to 'Edit', edit_place_route_path(@route), id: "edit_place_route_link", :class=> "btn btn-default", remote: true  %> |
 <%= link_to 'Delete', place_route_path(@route),:data => {:confirm => "You sure?", :method => 'delete'} %>

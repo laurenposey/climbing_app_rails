@@ -21,10 +21,10 @@ class RoutesController < ApplicationController
     @route = @place.routes.new(route_params)
     if @route.save
       flash[:notice] = "Route saved successfully!"
-      redirect_to place_path(@place)
+      redirect_to :back
     else
       flash[:alert] = "Something went wrong"
-      render :new
+      render :back
     end
   end
 
@@ -33,10 +33,10 @@ class RoutesController < ApplicationController
     @route = Route.find(params[:id])
     if @route.update(route_params)
       flash[:notice] = "Update saved successfully"
-      redirect_to place_path(@place)
+      redirect_to :back
     else
       flash[:alert] = "Something went wrong"
-      render :edit
+      render :back
     end
   end
 
