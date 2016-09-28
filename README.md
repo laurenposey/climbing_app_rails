@@ -1,5 +1,7 @@
 # Mac users will need to change the encoding in the `config/database.yml` file from `WIN1252` to `UTF8` or `unicode`.
 
+# Windows users use `bundle exec rspec` to run tests
+
 # _EPICODUS INDEPENDENT PROJECT | A Climbing App_
 
 #### _A Climbing App, September 2016_

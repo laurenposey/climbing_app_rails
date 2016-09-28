@@ -5,7 +5,7 @@ describe "the add a place process" do
     user = FactoryGirl.create(:user)
     login_as(user, :scope => :user)
     visit places_path
-    click_link 'New Place'
+    click_link 'Add place'
     fill_in 'Name', :with => 'Planet Granite'
     fill_in 'Street address', :with => '1405 NW 14th Ave'
     fill_in 'City', :with => 'Portland'

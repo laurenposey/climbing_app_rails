@@ -40,7 +40,7 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.4.0)
     arel (7.1.2)
-    autoprefixer-rails (6.4.1.1)
+    autoprefixer-rails (6.5.0)
       execjs
     bcrypt (3.1.11-x86-mingw32)
     bootstrap-navbar (2.3.0)
@@ -115,7 +115,7 @@ GEM
     mime-types-data (3.2016.0521)
     mimemagic (0.3.2)
     mini_portile2 (2.1.0)
-    minitest (5.9.0)
+    minitest (5.9.1)
     multi_json (1.12.1)
     nio4r (1.2.1)
     nokogiri (1.6.8-x86-mingw32)
@@ -129,6 +129,7 @@ GEM
       mime-types
       mimemagic (~> 0.3.0)
     pg (0.19.0-x86-mingw32)
+    phantomjs (2.1.1.0)
     pkg-config (1.1.7)
     poltergeist (1.10.0)
       capybara (~> 2.1)
@@ -260,6 +261,7 @@ DEPENDENCIES
   nokogiri (>= 1.6.7.rc)
   paperclip (~> 5.0.0)
   pg (~> 0.18)
+  phantomjs
   poltergeist
   pry
   puma (~> 3.0)

@@ -22,6 +22,7 @@ group :development, :test do
   gem 'pry'
   gem 'shoulda-matchers'
   gem 'poltergeist'
+  gem 'phantomjs', :require => 'phantomjs/poltergeist'
   gem 'factory_girl_rails'
   gem 'capybara'
   gem 'simplecov', require: false

@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe "the edit a place process" do
-  it "edit a place" do
+  it "edit a place", js: true do
     user = FactoryGirl.create(:user)
     place = FactoryGirl.create(:place, user_id: user.id)
     login_as(user, :scope => :user)
