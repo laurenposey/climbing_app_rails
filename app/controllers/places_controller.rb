@@ -1,11 +1,6 @@
 class PlacesController < ApplicationController
   def index
-    if params[:search]
-      # optional: add an order-by
-      @places = call API here
-    else
-      @places = Place.all
-    end
+    @places = Place.all
     render :index
   end
 

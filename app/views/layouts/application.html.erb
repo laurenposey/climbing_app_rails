@@ -29,6 +29,16 @@
         <% if user_signed_in? %>
             <p class="navbar-text">Logged in as <strong><%= current_user.email %></strong></p>
           <ul class="nav navbar-nav navbar-right">
+            <div class="input-group">
+                    <%= form_tag(places_path, :method => "get", id: "search-form") do %>
+                    <%= text_field_tag :search, params[:search], placeholder: "Search Posts", class: 'form-control' %>
+                <span class="input-group-btn">
+                     <%= submit_tag "Search", class: 'btn btn-success' %>
+                </span>
+                <% end %>
+                </div>
+                </form>
+
             <li><%= link_to "Edit profile", edit_user_registration_path %></li>
             <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
           </ul>
