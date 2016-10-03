@@ -3,13 +3,14 @@ Rails.application.routes.draw do
     devise_scope :user do
       authenticated :user do
         root :to => 'places#index', as: :authenticated_root
-        get '/' => 'places#index'
       end
       unauthenticated :user do
         root :to => 'devise/registrations#new', as: :unauthenticated_root
       end
+    resources :weather_conditions
     resources :places do
       resources :routes
+
     end
   end
 end

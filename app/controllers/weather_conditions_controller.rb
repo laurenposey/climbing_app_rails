@@ -1,10 +1,10 @@
 class WeatherConditionsController < ApplicationController
   def index
-    @weather_conditions = WeatherConditions.all
+    @weather_conditions = WeatherCondition.all
   end
 
   def new
-    @weather_condition = WeatherConditions.new
+    @weather_condition = WeatherCondition.new
   end
 
   def create

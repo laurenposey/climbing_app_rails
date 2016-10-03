@@ -6,7 +6,7 @@
 
 # _EPICODUS INDEPENDENT PROJECT | A Climbing App_
 
-#### _A Climbing App, September 2016_
+#### _A Climbing App, 2016_
 
 #### By _**Lauren Posey**_
 
