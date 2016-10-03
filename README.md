@@ -1,5 +1,7 @@
 # Mac users will need to change the encoding in the `config/database.yml` file from `WIN1252` to `UTF8` or `unicode`.
 
+# API for this project is weather underground. set `API_KEY` to `8eb4c43ad5` in `.env` file
+
 # Windows users use `bundle exec rspec` to run tests
 
 # _EPICODUS INDEPENDENT PROJECT | A Climbing App_

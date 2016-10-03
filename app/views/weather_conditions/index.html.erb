@@ -1,0 +1,9 @@
+<h1>Weather Conditions</h1>
+
+<ul>
+  <% @weather_conditions.each do |weather_condition| %>
+    <li><%= weather_condition.city %>, <%= weather_condition.state %>, <%= weather_condition.forcast %></li>
+  <% end %>
+</ul>
+
+<hr>

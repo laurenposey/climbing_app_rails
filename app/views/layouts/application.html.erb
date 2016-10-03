@@ -20,6 +20,8 @@
           <span class="icon-bar"></span>
         </button>
         <p class="navbar-brand"><%= link_to "Places", places_path %></p>
+        <p><%= link_to "Weather", new_weather_condition_path %></p>
+
       </div>
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -29,16 +31,6 @@
         <% if user_signed_in? %>
             <p class="navbar-text">Logged in as <strong><%= current_user.email %></strong></p>
           <ul class="nav navbar-nav navbar-right">
-            <div class="input-group">
-                    <%= form_tag(searches_path, :method => "get", id: "search-form") do %>
-                    <%= text_field_tag :search, params[:search], placeholder: "Search Posts", class: 'form-control' %>
-                <span class="input-group-btn">
-                     <%= submit_tag "Search", class: 'btn btn-success' %>
-                </span>
-                <% end %>
-                </div>
-                </form>
-
             <li><%= link_to "Edit profile", edit_user_registration_path %></li>
             <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
           </ul>
