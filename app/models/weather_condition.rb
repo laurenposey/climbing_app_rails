@@ -1,4 +1,4 @@
-class Weather_Conditions < ActiveRecord::Base
+class WeatherConditions < ActiveRecord::Base
 
   private
 
@@ -6,7 +6,7 @@ class Weather_Conditions < ActiveRecord::Base
     begin
       response = RestClient::Request.new(
       :method => :post,
-      :url => 'http://api.wunderground.com/api/febfd3b059934ab2/conditions/q/=zip.json',
+      :url => 'http://api.wunderground.com/api/febfd3b059934ab2/conditions/q/' + zip + '.json',
       :user => ENV['API_KEY'],
       :payload => { :zip => zip}
       ).execute
