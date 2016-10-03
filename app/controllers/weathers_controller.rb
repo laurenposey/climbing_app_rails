@@ -23,6 +23,6 @@ class WeathersController < ApplicationController
   private
 
     def weather_params
-      params.require(:weather).permit(:zip)
+      params.require(:weather).permit(:zip, :state, :forcast, :city)
     end
   end
