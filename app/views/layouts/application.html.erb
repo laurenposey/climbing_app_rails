@@ -30,7 +30,7 @@
             <p class="navbar-text">Logged in as <strong><%= current_user.email %></strong></p>
           <ul class="nav navbar-nav navbar-right">
             <div class="input-group">
-                    <%= form_tag(places_path, :method => "get", id: "search-form") do %>
+                    <%= form_tag(searches_path, :method => "get", id: "search-form") do %>
                     <%= text_field_tag :search, params[:search], placeholder: "Search Posts", class: 'form-control' %>
                 <span class="input-group-btn">
                      <%= submit_tag "Search", class: 'btn btn-success' %>
