@@ -1,4 +1,4 @@
-class WeatherConditions < ActiveRecord::Base
+class Weather < ActiveRecord::Base
 
   private
 

@@ -7,7 +7,7 @@ Rails.application.routes.draw do
       unauthenticated :user do
         root :to => 'devise/registrations#new', as: :unauthenticated_root
       end
-    resources :weather_conditions
+    resources :weathers
     resources :places do
       resources :routes
 
