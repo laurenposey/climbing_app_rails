@@ -9,6 +9,7 @@ class WeathersController < ApplicationController
 
   def create
     @weather = Weather.new(weather_params)
+
     if @weather.save
       redirect_to weathers_path
     else
@@ -23,6 +24,6 @@ class WeathersController < ApplicationController
   private
 
     def weather_params
-      params.require(:weather).permit(:zip, :state, :forcast, :city)
+      params.require(:weather).permit(:zip)
     end
   end

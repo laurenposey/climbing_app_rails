@@ -1,5 +1,9 @@
 class Weather < ActiveRecord::Base
+
+
   before_create :current_weather
+
+
 
   private
 
@@ -11,6 +15,9 @@ class Weather < ActiveRecord::Base
       :user => ENV['API_KEY'],
       :payload => { :zip => zip }
       ).execute
+    # self.update, parsed response etc.
+      parsed_response = JSON.parse(response)
+      weather_data = parsed_response['current_observation'].map { |w| Weather.new(w.update(:city => ['city'], :state => ['state'], :forcast => ['forcast_url'])) }
     rescue
       throw(:abort)
     end
