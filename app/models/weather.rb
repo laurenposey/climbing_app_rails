@@ -3,8 +3,6 @@ class Weather < ActiveRecord::Base
 
   before_create :current_weather
 
-
-
   private
 
   def current_weather
@@ -16,8 +14,15 @@ class Weather < ActiveRecord::Base
       :payload => { :zip => zip }
       ).execute
     # self.update, parsed response etc.
+
       parsed_response = JSON.parse(response)
-      weather_data = parsed_response['current_observation'].map { |w| Weather.new(w.update(:city => ['city'], :state => ['state'], :forcast => ['forcast_url'])) }
+
+      location_data = parsed_response['current_observation']['display_location']
+
+      self.city = location_data['city']
+      self.state = location_data['state']
+  
+
     rescue
       throw(:abort)
     end
