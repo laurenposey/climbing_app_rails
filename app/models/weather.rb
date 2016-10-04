@@ -17,11 +17,11 @@ class Weather < ActiveRecord::Base
 
       parsed_response = JSON.parse(response)
 
-      location_data = parsed_response['current_observation']['display_location']
+      location_data = parsed_response['current_observation']
+      self.city = location_data['display_location']['city']
+      self.state = location_data['display_location']['state']
+      self.forcast = location_data['temperature_string']
 
-      self.city = location_data['city']
-      self.state = location_data['state']
-  
 
     rescue
       throw(:abort)
