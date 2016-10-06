@@ -4,3 +4,32 @@
  /*
   *= require rails_bootstrap_forms
   */
+
+body {
+  background-color: #E5E059;
+}
+
+.navbar {
+  background-color: #BDD358;
+  border-color: transparent;
+
+}
+
+.link {
+  color: #000000;
+}
+
+.delete {
+  background-color: #E5625E;
+  border-color: transparent;
+}
+
+.generic {
+  background-color: #999799;
+  border-color: transparent;
+}
+
+.special {
+  background-color: #BDD358;
+  border-color: transparent;
+}

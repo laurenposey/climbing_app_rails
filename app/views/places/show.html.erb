@@ -15,8 +15,8 @@
 </ul>
 <% end %>
 
-<p><%= link_to "Add a Route", new_place_route_path(@place), id: "new_place_route_link", :class=> "btn btn-default", remote: true %></p>
-<p><%= link_to "Edit Place", edit_place_path(@place), id: "edit_place_link", :class=> "btn btn-default", remote: true %></p>
+<p><%= link_to "Add a Route", new_place_route_path(@place), id: "new_place_route_link", :class=> "btn btn-default special", remote: true %></p>
+<p><%= link_to "Edit Place", edit_place_path(@place), id: "edit_place_link", :class=> "btn btn-default generic", remote: true %></p>
 <p><%= link_to "Delete Place", place_path(@place),
                         :data => {:confirm => "Are you sure?",
-                                  :method => "delete"}, :class=> "btn btn-default" %></p>
+                                  :method => "delete"}, :class=> "btn btn-default delete" %></p>
