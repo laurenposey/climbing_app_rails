@@ -16,6 +16,7 @@ gem 'nokogiri', '>= 1.6.7.rc'
 gem 'rails_bootstrap_navbar'
 gem 'rest-client'
 gem 'dotenv-rails'
+gem 'bootstrap_form'
 
 
 group :development, :test do

@@ -2,14 +2,14 @@
 
 <%= form_for [@place, @route], remote: true do |f| %>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :kind %>
-    <%= f.text_field :kind %>
+    <%= f.text_field :kind, :class => "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :grade %>
-    <%= f.text_area :grade %>
+    <%= f.text_area :grade, :class => "form-control" %>
   </div>
 
   <div class="actions">
