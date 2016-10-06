@@ -9,7 +9,7 @@
   <li>
     <%= route.kind %> |
     <%= route.grade %> |
-    <%= link_to "View Route", place_route_path(@place, route) %>
+    <%= link_to "View Route", place_route_path(@place, route), :class => "list-link" %>
   </li>
   <% end %>
 </ul>
